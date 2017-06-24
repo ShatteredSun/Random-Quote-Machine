@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My frame test</title>
+
+  </head>
+      <style type="text/css">
+      
+body{
+  background-color:#777;
+  text-align:center;
+}
+.box{
+  border:10px solid #456;
+  height:300px;
+  width:700px;
+  margin:0px auto;
+  margin-top:100px;
+  background-color:#fff;
+}
+.boxtext{
+  font-family:Cursive;
+  margin:50px 20px 0px 20px;
+  width:600px;
+  height:100px;
+  text-align:center;
+}
+footer{
+  text-align:right;
+  margin-right:50px;
+  margin-left:50px;
+  height:75px;
+}
+.button{
+  margin:0px 0px 0px 20px;
+}
+img{
+  width:5%;
+  
+}
+
+.random{
+  float:right;
+  margin:0px 50px 0px 20px;
+  width:100px;
+  height:40px;
+  border:none;
+  padding:5px 5px 3px 5px;
+  color:#fff;
+}
+p{
+  text-align:center;
+  margin-top:20px;
+  color:#fff;
+}
+a{
+  text-decoration:none;
+  color:#fff;
+}
+</style>
+<script type="text/javascript">
+var myColor = new Array(
+  '#aa8','#cf1','#51a');
+var myQuote = new Array(
+  '世界上一成不变的东西，只有“任何事物都是在不断变化的”这条真理。',
+  '时间是一切财富中最宝贵的财富。',
+  '一件事实是一条没有性别的真理。'
+);
+var myAuthur = new Array('—— 斯里兰卡','—— 德奥弗拉斯多','—— 纪伯伦');
+document.getElementById('toshow').onclick=function(){
+  var randomNum = Math.floor(3*Math.random());
+  document.getElementById('footer').style.color = myColor[randomNum];
+  document.body.style.background= myColor[randomNum];
+  document.getElementById('boxtext').style.color = myColor[randomNum];
+  document.getElementById('toshow').style.background = myColor[randomNum];
+  
+  document.getElementById('boxtext').innerText = myQuote[randomNum];
+  document.getElementById('footer').innerText = myAuthur[randomNum];
+  
+};
+  
+
+
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"0","bdPos":"right","bdTop":"100"},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"24"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='https://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+  <body>
+    <div class='box ' id='box'>
+  <div class= 'boxtext' id='boxtext'>
+    <h3 class=''>世界上一成不变的东西，只有“任何事物都是在不断变化的”这条真理。
+    </h3>  
+  </div>
+    
+   <footer id='footer'>—— 斯里兰卡
+   </footer>
+  <div class='buttons'>
+    <a class='button' id='qq' title ='QQ' target='_blank'><i><img src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489903542592&di=f9468acb1700affcdd2775cb08d52f2c&imgtype=0&src=http%3A%2F%2Fp7.qhimg.com%2Fdr%2F250_500_%2Ft0148b7e8885efe4dbe.jpg'></i></a>
+    <a class='button' id='weixin' title= '微信' target='_blank'><i><img src = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489903918281&di=a5ecc4f9b90ecb3363ae991c9197550e&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fbaike%2Fabpic%2Fitem%2F507c38979f36650b54fb96e4.jpg'></i></a>
+    <button class='random' id='toshow'>Random</button>
+  </div>
+</div>
+ <p>by <a href='https://www.freecodecamp.cn/shatteredsun'>ShatteredSun</a></p>
+  </body>
+  
+</html>
